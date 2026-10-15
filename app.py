@@ -50,8 +50,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=False)
-    app.run(debug=False)
-    return render_template("index.html", answer=answer)
-
-if __name__ == "__main__":
-    app.run(debug=False)
