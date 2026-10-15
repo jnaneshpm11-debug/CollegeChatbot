@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Chatbot</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eaf2ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #ccc;
+        }
+
+        h1 {
+            color: #174ea6;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin-top: 15px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #174ea6;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .answer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f0f5ff;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎓 College Chatbot</h1>
+
+        <p>Welcome! Ask me about your college.</p>
+
+        <form method="POST">
+            <input
+                type="text"
+                name="question"
+                placeholder="Type your question here..."
+                required
+            >
+            <br>
+            <button type="submit">Send Message</button>
+        </form>
+
+        {% if answer %}
+        <div class="answer">
+            <h3>Chatbot Answer:</h3>
+            <p>{{ answer }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
