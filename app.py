@@ -25,8 +25,23 @@ def get_answer(question):
     elif any(word in q for word in ["admission", "eligibility"]):
         return "For admission details, please contact the college admission office."
 
-    elif any(word in q for word in ["fee", "fees", "payment"]):
-        return "Please contact the college office for accurate fee details."
+    elif "fee" in question or "fees" in question:
+            answer = (
+                "KVG College of Engineering, Sullia - Admission Fees\n\n"
+                "The fees depend on the course and admission category.\n"
+                "For the exact current fee structure, please contact "
+                "the college admission office.\n"
+                "Ask the office about tuition fees, admission fees, "
+                "and other applicable charges."
+            )
+
+        elif "admission" in question:
+            answer = (
+                "Welcome to KVG College of Engineering, Sullia!\n"
+                "For admission details, eligibility, required "
+                "documents, and the admission process, please "
+                "contact the college admission office."
+            )
 
     elif any(word in q for word in ["timing", "timings", "hours"]):
         return "Please contact the college office to confirm college timings."
