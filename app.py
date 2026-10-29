@@ -54,6 +54,14 @@ def get_answer(question):
 
     elif "thank" in q:
         return "You're welcome! Ask me another question."
+    elif "hod" in question or "head of department" in question:
+            answer = (
+                "HOD Name: Ravishankar Bhat. He is the Head of the Department of Computer Science and Engineering. "
+            )
+
+        elif "class teacher" in question or "class tutor" in question:
+            answer = (
+                "Class Teacher Name: Mrs.Premalatha.b. She is the class teacher for the Computer Science and Engineering department."    
 
     else:
         return (
