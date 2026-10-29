@@ -9,8 +9,18 @@ def get_answer(question):
     if q in ["hi", "hello", "hey"]:
         return "Hello! Welcome to our College Chatbot!"
 
-    elif any(word in q for word in ["course", "courses", "branch"]):
-        return "Please contact the college office for the official list of courses."
+    elif "course" in question or "courses" in question:
+    answer = (
+        "KVG College of Engineering, Sullia offers these "
+        "undergraduate engineering branches:\n"
+        "1. Computer Science and Engineering (CSE)\n"
+        "2. Computer Science and Engineering (AI & ML)\n"
+        "3. Computer Engineering\n"
+        "4. Electronics and Communication Engineering (ECE)\n"
+        "5. Civil Engineering\n"
+        "6. Mechanical Engineering\n\n"
+        "Please contact the college office to confirm "
+        "the currently available courses."
 
     elif any(word in q for word in ["admission", "eligibility"]):
         return "For admission details, please contact the college admission office."
@@ -46,6 +56,10 @@ def home():
         answer = get_answer(question)
 
     return render_template("index.html", answer=answer)
+
+
+if __name__ == "__main__":
+    app.run(debug=False)
 
 
 if __name__ == "__main__":
